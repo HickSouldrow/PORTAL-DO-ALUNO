@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Portal do Aluno</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body class="bg-stone-950 text-white">
+
+    <!-- HEADER -->
+<header class="bg-stone-950 border-b-2 border-red-700 sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="{{ route('site.home') }}" class="flex items-center gap-3">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 font-bold text-xl">Portal do Aluno</span>
+        </a>
+        <nav>
+            <ul class="flex gap-8 text-stone-300 font-medium">
+                <li><a href="{{ route('site.home') }}" class="text-red-500 hover:text-red-400 transition-colors">Início</a></li>
+                <li><a href="{{ route('site.cursos') }}" class="text-red-500 hover:text-red-400 transition-colors">Cursos</a></li>
+                <li><a href="{{ route('site.sobre') }}" class="text-red-500 hover:text-red-400 transition-colors">Sobre</a></li>
+                <li><a href="{{ route('site.contato') }}" class="text-red-500 hover:text-red-400 transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- SEÇÃO DE CURSOS -->
+    <main class="container mx-auto px-4 py-12 max-w-5xl">
+        <h1 class="text-4xl font-bold text-center mb-10 text-red-500">Nossos Cursos</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card de Curso -->
+            <div class="bg-stone-950 rounded-xl shadow-lg overflow-hidden border border-stone-700 hover:scale-105 transition-transform">
+                <img src="img/ds.jpg" alt="Curso 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-2 text-red-500">Desenvolvimento de Sistemas</h2>
+                    <p class="text-stone-400 mb-4">Aprenda programação, banco de dados, redes e desenvolvimento web com foco no mercado de trabalho.</p>
+                    <a href="#" class="inline-block bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg">Saiba Mais</a>
+                </div>
+            </div>
+
+            <!-- Card de Curso -->
+            <div class="bg-stone-950 rounded-xl shadow-lg overflow-hidden border border-stone-700 hover:scale-105 transition-transform">
+                <img src="img/adm.jpg" alt="Curso 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-2 text-red-500">Administração</h2>
+                    <p class="text-stone-400 mb-4">Domine gestão empresarial, finanças, marketing e empreendedorismo com conteúdo atualizado.</p>
+                    <a href="#" class="inline-block bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg">Saiba Mais</a>
+                </div>
+            </div>
+
+            <!-- Card de Curso -->
+            <div class="bg-stone-950 rounded-xl shadow-lg overflow-hidden border border-stone-700 hover:scale-105 transition-transform">
+                <img src="img/info.jpg" alt="Curso 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-2 text-red-500">Informática para Internet</h2>
+                    <p class="text-stone-400 mb-4">Crie sites, aplicativos e sistemas web usando as tecnologias mais modernas e requisitadas.</p>
+                    <a href="#" class="inline-block bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 py-10 border-t border-stone-800 bg-stone-900 text-center text-stone-500 text-sm">
+        <div class="container mx-auto px-6 max-w-6xl grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h4 class="text-lg font-bold mb-4 text-red-500">Portal do Aluno</h4>
+                <p class="mb-2">Rua das Notas Boas, 165 C</p>
+                <p class="mb-2">São Paulo, SP</p>
+                <p class="mb-2">CEP: 00000-000</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4 text-red-500">Contato</h4>
+                <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i> (11) 99999-9999</p>
+                <p class="mb-2"><i class="fas fa-envelope mr-2"></i> contato@portaldoaluno.com</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4 text-red-500">Horário</h4>
+                <p class="mb-2">Segunda a Sexta</p>
+                <p class="mb-2">Das 09h às 18h</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4 text-red-500">Redes Sociais</h4>
+                <div class="flex justify-center md:justify-start space-x-4 px-16">
+                    <a href="#" class="text-stone-500 hover:text-red-500 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-stone-500 hover:text-red-500 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-stone-500 hover:text-red-500 transition"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-stone-500 hover:text-red-500 transition"><i class="fab fa-youtube text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-stone-800 pt-6 text-center text-stone-500">
+            <p>&copy; 2025 Portal do Aluno. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
